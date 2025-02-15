@@ -2,6 +2,8 @@ module github.com/oapi-codegen/oapi-codegen/v2
 
 go 1.21.0
 
+replace github.com/getkin/kin-openapi v0.128.0 => github.com/lukacat10/kin-openapi nullable-fields
+
 require (
 	github.com/getkin/kin-openapi v0.128.0
 	github.com/speakeasy-api/openapi-overlay v0.9.0
