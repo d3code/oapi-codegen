@@ -149,47 +149,90 @@ func mergeOpenapiSchemas(s1, s2 openapi3.Schema, allOf bool) (openapi3.Schema, e
 	// We skip ExternalDocs
 
 	// If two schemas disagree on any of these flags, we error out.
-	if s1.UniqueItems != s2.UniqueItems {
+	if !s1.UniqueItems.Valid && s2.UniqueItems.Valid { // Only s2 is defined
+		result.UniqueItems = s2.UniqueItems
+	} else if s1.UniqueItems.Valid && !s2.UniqueItems.Valid { // Only s1 is defined
+		result.UniqueItems = s1.UniqueItems
+	} else if s1.UniqueItems.Bool != s2.UniqueItems.Bool { // Different value (both defined)
 		return openapi3.Schema{}, errors.New("merging two schemas with different UniqueItems")
-
+	} else if s1.UniqueItems == s2.UniqueItems { // Same value (or non defined)
+		result.UniqueItems = s1.UniqueItems
+	} else { 
+		return openapi3.Schema{}, errors.New("merging two schemas on UniqueItems unknown error")
 	}
-	result.UniqueItems = s1.UniqueItems
+	
 
-	if s1.ExclusiveMin != s2.ExclusiveMin {
+	if !s1.ExclusiveMin.Valid && s2.ExclusiveMin.Valid { // Only s2 is defined
+		result.ExclusiveMin = s2.ExclusiveMin
+	} else if s1.ExclusiveMin.Valid && !s2.ExclusiveMin.Valid { // Only s1 is defined
+		result.ExclusiveMin = s1.ExclusiveMin
+	} else if s1.ExclusiveMin.Bool != s2.ExclusiveMin.Bool { // Different value (both defined)
 		return openapi3.Schema{}, errors.New("merging two schemas with different ExclusiveMin")
-
+	} else if s1.ExclusiveMin == s2.ExclusiveMin { // Same value (or non defined)
+		result.ExclusiveMin = s1.ExclusiveMin
+	} else { 
+		return openapi3.Schema{}, errors.New("merging two schemas on ExclusiveMin unknown error")
 	}
-	result.ExclusiveMin = s1.ExclusiveMin
 
-	if s1.ExclusiveMax != s2.ExclusiveMax {
+	if !s1.ExclusiveMax.Valid && s2.ExclusiveMax.Valid { // Only s2 is defined
+		result.ExclusiveMax = s2.ExclusiveMax
+	} else if s1.ExclusiveMax.Valid && !s2.ExclusiveMax.Valid { // Only s1 is defined
+		result.ExclusiveMax = s1.ExclusiveMax
+	} else if s1.ExclusiveMax.Bool != s2.ExclusiveMax.Bool { // Different value (both defined)
 		return openapi3.Schema{}, errors.New("merging two schemas with different ExclusiveMax")
-
+	} else if s1.ExclusiveMax == s2.ExclusiveMax { // Same value (or non defined)
+		result.ExclusiveMax = s1.ExclusiveMax
+	} else { 
+		return openapi3.Schema{}, errors.New("merging two schemas on ExclusiveMax unknown error")
 	}
-	result.ExclusiveMax = s1.ExclusiveMax
 
-	if s1.Nullable != s2.Nullable {
+	if !s1.Nullable.Valid && s2.Nullable.Valid { // Only s2 is defined
+		result.Nullable = s2.Nullable
+	} else if s1.Nullable.Valid && !s2.Nullable.Valid { // Only s1 is defined
+		result.Nullable = s1.Nullable
+	} else if s1.Nullable.Bool != s2.Nullable.Bool { // Different value (both defined)
 		return openapi3.Schema{}, errors.New("merging two schemas with different Nullable")
-
+	} else if s1.Nullable == s2.Nullable { // Same value (or non defined)
+		result.Nullable = s1.Nullable
+	} else { 
+		return openapi3.Schema{}, errors.New("merging two schemas on Nullable unknown error")
 	}
-	result.Nullable = s1.Nullable
 
-	if s1.ReadOnly != s2.ReadOnly {
+	if !s1.ReadOnly.Valid && s2.ReadOnly.Valid { // Only s2 is defined
+		result.ReadOnly = s2.ReadOnly
+	} else if s1.ReadOnly.Valid && !s2.ReadOnly.Valid { // Only s1 is defined
+		result.ReadOnly = s1.ReadOnly
+	} else if s1.ReadOnly.Bool != s2.ReadOnly.Bool { // Different value (both defined)
 		return openapi3.Schema{}, errors.New("merging two schemas with different ReadOnly")
-
+	} else if s1.ReadOnly == s2.ReadOnly { // Same value (or non defined)
+		result.ReadOnly = s1.ReadOnly
+	} else { 
+		return openapi3.Schema{}, errors.New("merging two schemas on ReadOnly unknown error")
 	}
-	result.ReadOnly = s1.ReadOnly
 
-	if s1.WriteOnly != s2.WriteOnly {
+	if !s1.WriteOnly.Valid && s2.WriteOnly.Valid { // Only s2 is defined
+		result.WriteOnly = s2.WriteOnly
+	} else if s1.WriteOnly.Valid && !s2.WriteOnly.Valid { // Only s1 is defined
+		result.WriteOnly = s1.WriteOnly
+	} else if s1.WriteOnly.Bool != s2.WriteOnly.Bool { // Different value (both defined)
 		return openapi3.Schema{}, errors.New("merging two schemas with different WriteOnly")
-
+	} else if s1.WriteOnly == s2.WriteOnly { // Same value (or non defined)
+		result.WriteOnly = s1.WriteOnly
+	} else { 
+		return openapi3.Schema{}, errors.New("merging two schemas on WriteOnly unknown error")
 	}
-	result.WriteOnly = s1.WriteOnly
 
-	if s1.AllowEmptyValue != s2.AllowEmptyValue {
+	if !s1.AllowEmptyValue.Valid && s2.AllowEmptyValue.Valid { // Only s2 is defined
+		result.AllowEmptyValue = s2.AllowEmptyValue
+	} else if s1.AllowEmptyValue.Valid && !s2.AllowEmptyValue.Valid { // Only s1 is defined
+		result.AllowEmptyValue = s1.AllowEmptyValue
+	} else if s1.AllowEmptyValue.Bool != s2.AllowEmptyValue.Bool { // Different value (both defined)
 		return openapi3.Schema{}, errors.New("merging two schemas with different AllowEmptyValue")
-
+	} else if s1.AllowEmptyValue == s2.AllowEmptyValue { // Same value (or non defined)
+		result.AllowEmptyValue = s1.AllowEmptyValue
+	} else { 
+		return openapi3.Schema{}, errors.New("merging two schemas on AllowEmptyValue unknown error")
 	}
-	result.AllowEmptyValue = s1.AllowEmptyValue
 
 	// Required. We merge these.
 	result.Required = append(s1.Required, s2.Required...)
