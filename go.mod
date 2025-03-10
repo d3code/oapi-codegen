@@ -2,6 +2,8 @@ module github.com/oapi-codegen/oapi-codegen/v2
 
 go 1.21.0
 
+replace github.com/getkin/kin-openapi v0.128.0 => github.com/lukacat10/kin-openapi nullable-fields
+
 require (
 	github.com/getkin/kin-openapi v0.128.0
 	github.com/speakeasy-api/openapi-overlay v0.9.0
@@ -17,6 +19,7 @@ require (
 	github.com/dprotaso/go-yit v0.0.0-20220510233725-9ba8df137936 // indirect
 	github.com/go-openapi/jsonpointer v0.21.0 // indirect
 	github.com/go-openapi/swag v0.23.0 // indirect
+	github.com/guregu/null/v5 v5.0.0 // indirect
 	github.com/invopop/yaml v0.3.1 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect

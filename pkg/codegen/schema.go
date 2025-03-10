@@ -424,9 +424,9 @@ func GenerateGoSchema(sref *openapi3.SchemaRef, path []string) (Schema, error) {
 					Schema:        pSchema,
 					Required:      required,
 					Description:   description,
-					Nullable:      p.Value.Nullable,
-					ReadOnly:      p.Value.ReadOnly,
-					WriteOnly:     p.Value.WriteOnly,
+					Nullable:      p.Value.Nullable.Bool,
+					ReadOnly:      p.Value.ReadOnly.Bool,
+					WriteOnly:     p.Value.WriteOnly.Bool,
 					Extensions:    p.Value.Extensions,
 					Deprecated:    p.Value.Deprecated,
 				}
@@ -546,7 +546,7 @@ func GenerateGoSchema(sref *openapi3.SchemaRef, path []string) (Schema, error) {
 // oapiSchemaToGoType converts an OpenApi schema into a Go type definition for
 // all non-object types.
 func oapiSchemaToGoType(schema *openapi3.Schema, path []string, outSchema *Schema) error {
-	f := schema.Format
+	f := schema.Format.String
 	t := schema.Type
 
 	if t.Is("array") {
@@ -777,7 +777,7 @@ func additionalPropertiesType(schema Schema) string {
 	if schema.AdditionalPropertiesType.RefType != "" {
 		addPropsType = schema.AdditionalPropertiesType.RefType
 	}
-	if schema.AdditionalPropertiesType.OAPISchema != nil && schema.AdditionalPropertiesType.OAPISchema.Nullable {
+	if schema.AdditionalPropertiesType.OAPISchema != nil && schema.AdditionalPropertiesType.OAPISchema.Nullable.Bool {
 		addPropsType = "*" + addPropsType
 	}
 	return addPropsType
