@@ -4,7 +4,7 @@
 
     It looks like this PR was raised from the `main` branch.
 
-    As per [our contributing guidelines](https://github.com/oapi-codegen/oapi-codegen/blob/main/CONTRIBUTING.md#before-you-raise-a-pr), this can make it difficult for us to push changes to your fork - for instance to directly push a change to address a comment that we would raise, or to finalise changes before merge.
+    As per [our contributing guidelines](https://github.com/d3code/oapi-codegen/blob/main/CONTRIBUTING.md#before-you-raise-a-pr), this can make it difficult for us to push changes to your fork - for instance to directly push a change to address a comment that we would raise, or to finalise changes before merge.
 
     Please re-raise the PR from a branch on your repository that isn't `main` / any protected branches.
 
@@ -18,19 +18,19 @@
 
     However, @-mentioning the maintainers will be very unlikely to help move your issue along, and we do not want to encourage behaviour that leads to the "noisiest" users getting the benefit over folks who are waiting their turn.
 
-    Please remember that `oapi-codegen` is for the most part run by volunteers, and [we have a request out](https://github.com/oapi-codegen/oapi-codegen/discussions/1606) to companies who use the project to help make it more sustainable, with sponsorship.
+    Please remember that `oapi-codegen` is for the most part run by volunteers, and [we have a request out](https://github.com/d3code/oapi-codegen/discussions/1606) to companies who use the project to help make it more sustainable, with sponsorship.
 
     It will only be that sustained financial support will be able to make it possible to work more efficiently towards user requests.
 
-    For more info on engaging with the maintainers, see [our CONTRIBUTING guide](https://github.com/oapi-codegen/oapi-codegen/blob/main/CONTRIBUTING.md#should-i--mention-the-maintainers-on-an-issue).
+    For more info on engaging with the maintainers, see [our CONTRIBUTING guide](https://github.com/d3code/oapi-codegen/blob/main/CONTRIBUTING.md#should-i--mention-the-maintainers-on-an-issue).
 
 'auto:pinning-until-release':
   comment: >
-    [Until there is a defined release cadence planned](https://github.com/oapi-codegen/oapi-codegen/issues/1519), our [official recommendation](https://github.com/oapi-codegen/oapi-codegen/blob/main/README.md#pinning-to-commits) is that you pin to the latest commit on `main`, which will allow you to pull in this change.
+    [Until there is a defined release cadence planned](https://github.com/d3code/oapi-codegen/issues/1519), our [official recommendation](https://github.com/d3code/oapi-codegen/blob/main/README.md#pinning-to-commits) is that you pin to the latest commit on `main`, which will allow you to pull in this change.
 
 'auto:sponsorship':
   comment: >
-    Please remember that `oapi-codegen` is for the most part run by volunteers, and [we have a request out](https://github.com/oapi-codegen/oapi-codegen/discussions/1606) to companies who use the project to help make it more sustainable, with sponsorship.
+    Please remember that `oapi-codegen` is for the most part run by volunteers, and [we have a request out](https://github.com/d3code/oapi-codegen/discussions/1606) to companies who use the project to help make it more sustainable, with sponsorship.
 
     If this is high-priority for your organisation, please consider whether you would like to sponsor ongoing maintenance of the project, or that you may want to engage the maintainers to perform a one-off contract/bug bounty.
 
@@ -42,7 +42,7 @@
   comment: >
     Thanks for the report!
 
-    To help maintainers (or other users) help with triaging and fixing of the issue more easily, we need a [Minimal Reproduction](https://github.com/oapi-codegen/oapi-codegen/blob/main/CONTRIBUTING.md#minimal-reproductions) test case.
+    To help maintainers (or other users) help with triaging and fixing of the issue more easily, we need a [Minimal Reproduction](https://github.com/d3code/oapi-codegen/blob/main/CONTRIBUTING.md#minimal-reproductions) test case.
 
     Please follow the instructions, and then share a URL to the repository.
 

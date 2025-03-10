@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/d3code/oapi-codegen/v2/examples/minimal-server/gorillamux/api"
 	"github.com/gorilla/mux"
-	"github.com/oapi-codegen/oapi-codegen/v2/examples/minimal-server/gorillamux/api"
 )
 
 func main() {

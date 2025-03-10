@@ -7,7 +7,7 @@ import (
 	"github.com/d3code/kin-openapi/openapi3"
 	"github.com/stretchr/testify/require"
 
-	"github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen"
+	"github.com/d3code/oapi-codegen/v2/pkg/codegen"
 )
 
 //go:embed child.api.yaml
@@ -29,7 +29,7 @@ func TestIssue(t *testing.T) {
 			EmbeddedSpec: true,
 		},
 		ImportMapping: map[string]string{
-			"parent.api.yaml": "github.com/oapi-codegen/oapi-codegen/v2/internal/test/issues/issue-1093/api/parent",
+			"parent.api.yaml": "github.com/d3code/oapi-codegen/v2/internal/test/issues/issue-1093/api/parent",
 		},
 	}
 

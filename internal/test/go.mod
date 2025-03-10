@@ -1,13 +1,14 @@
-module github.com/oapi-codegen/oapi-codegen/v2/internal/test
+module github.com/d3code/oapi-codegen/v2/internal/test
 
 go 1.22.5
 
 toolchain go1.24.0
 
-replace github.com/oapi-codegen/oapi-codegen/v2 => ../../
+replace github.com/d3code/oapi-codegen/v2 => ../../
 
 require (
-	github.com/getkin/kin-openapi v0.128.0
+	github.com/d3code/kin-openapi v0.0.0-20250310002555-abac6e1af6bc
+	github.com/d3code/oapi-codegen/v2 v2.0.0-00010101000000-000000000000
 	github.com/gin-gonic/gin v1.9.1
 	github.com/go-chi/chi/v5 v5.0.10
 	github.com/gofiber/fiber/v2 v2.49.1
@@ -15,7 +16,6 @@ require (
 	github.com/kataras/iris/v12 v12.2.6-0.20230908161203-24ba4e8933b9
 	github.com/labstack/echo/v4 v4.11.3
 	github.com/oapi-codegen/nullable v1.0.1
-	github.com/oapi-codegen/oapi-codegen/v2 v2.0.0-00010101000000-000000000000
 	github.com/oapi-codegen/runtime v1.1.0
 	github.com/oapi-codegen/testutil v1.0.0
 	github.com/stretchr/testify v1.10.0
@@ -51,7 +51,7 @@ require (
 	github.com/gomarkdown/markdown v0.0.0-20230716120725-531d2d74bc12 // indirect
 	github.com/google/uuid v1.4.0 // indirect
 	github.com/gorilla/css v1.0.0 // indirect
-	github.com/invopop/yaml v0.3.1 // indirect
+	github.com/guregu/null/v5 v5.0.0 // indirect
 	github.com/iris-contrib/schema v0.0.6 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -73,6 +73,8 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
+	github.com/oasdiff/yaml v0.0.0-20241210131133-6b86fb107d80 // indirect
+	github.com/oasdiff/yaml3 v0.0.0-20241210130736-a94c01f36349 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.9 // indirect
 	github.com/perimeterx/marshmallow v1.1.5 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect

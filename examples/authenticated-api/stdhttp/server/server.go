@@ -9,8 +9,8 @@ import (
 	"sync"
 
 	"github.com/d3code/kin-openapi/openapi3filter"
+	"github.com/d3code/oapi-codegen/v2/examples/authenticated-api/stdhttp/api"
 	middleware "github.com/oapi-codegen/nethttp-middleware"
-	"github.com/oapi-codegen/oapi-codegen/v2/examples/authenticated-api/stdhttp/api"
 )
 
 type server struct {

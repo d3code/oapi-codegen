@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/d3code/kin-openapi/openapi3"
-	"github.com/oapi-codegen/oapi-codegen/v2/pkg/codegen"
+	"github.com/d3code/oapi-codegen/v2/pkg/codegen"
 	"github.com/stretchr/testify/require"
 )
 
