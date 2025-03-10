@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"text/template"
 
-	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/d3code/kin-openapi/openapi3"
 )
 
 // GenerateInlinedSpec generates a gzipped, base64 encoded JSON representation of the

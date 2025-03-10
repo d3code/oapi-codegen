@@ -18,7 +18,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/d3code/kin-openapi/openapi3"
 	"github.com/kataras/iris/v12"
 	"github.com/oapi-codegen/runtime"
 	strictiris "github.com/oapi-codegen/runtime/strictmiddleware/iris"

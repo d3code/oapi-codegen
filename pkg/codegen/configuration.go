@@ -178,7 +178,7 @@ type CompatibilityOptions struct {
 	// In some OpenAPI specifications, we have a higher number of circular
 	// references than is allowed out-of-the-box, but can be tuned to allow
 	// traversing them.
-	// Deprecated: In kin-openapi v0.126.0 (https://github.com/getkin/kin-openapi/tree/v0.126.0?tab=readme-ov-file#v01260) the Circular Reference Counter functionality was removed, instead resolving all references with backtracking, to avoid needing to provide a limit to reference counts.
+	// Deprecated: In kin-openapi v0.126.0 (https://github.com/d3code/kin-openapi/tree/v0.126.0?tab=readme-ov-file#v01260) the Circular Reference Counter functionality was removed, instead resolving all references with backtracking, to avoid needing to provide a limit to reference counts.
 	CircularReferenceLimit int `yaml:"circular-reference-limit"`
 	// AllowUnexportedStructFieldNames makes it possible to output structs that have fields that are unexported.
 	//

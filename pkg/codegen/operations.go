@@ -23,9 +23,9 @@ import (
 	"text/template"
 	"unicode"
 
-	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/d3code/kin-openapi/openapi3"
 
-	"github.com/oapi-codegen/oapi-codegen/v2/pkg/util"
+	"github.com/d3code/oapi-codegen/v2/pkg/util"
 )
 
 type ParameterDefinition struct {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/d3code/kin-openapi/openapi3"
 )
 
 // MergeSchemas merges all the fields in the schemas supplied into one giant schema.
@@ -157,10 +157,9 @@ func mergeOpenapiSchemas(s1, s2 openapi3.Schema, allOf bool) (openapi3.Schema, e
 		return openapi3.Schema{}, errors.New("merging two schemas with different UniqueItems")
 	} else if s1.UniqueItems == s2.UniqueItems { // Same value (or non defined)
 		result.UniqueItems = s1.UniqueItems
-	} else { 
+	} else {
 		return openapi3.Schema{}, errors.New("merging two schemas on UniqueItems unknown error")
 	}
-	
 
 	if !s1.ExclusiveMin.Valid && s2.ExclusiveMin.Valid { // Only s2 is defined
 		result.ExclusiveMin = s2.ExclusiveMin
@@ -170,7 +169,7 @@ func mergeOpenapiSchemas(s1, s2 openapi3.Schema, allOf bool) (openapi3.Schema, e
 		return openapi3.Schema{}, errors.New("merging two schemas with different ExclusiveMin")
 	} else if s1.ExclusiveMin == s2.ExclusiveMin { // Same value (or non defined)
 		result.ExclusiveMin = s1.ExclusiveMin
-	} else { 
+	} else {
 		return openapi3.Schema{}, errors.New("merging two schemas on ExclusiveMin unknown error")
 	}
 
@@ -182,7 +181,7 @@ func mergeOpenapiSchemas(s1, s2 openapi3.Schema, allOf bool) (openapi3.Schema, e
 		return openapi3.Schema{}, errors.New("merging two schemas with different ExclusiveMax")
 	} else if s1.ExclusiveMax == s2.ExclusiveMax { // Same value (or non defined)
 		result.ExclusiveMax = s1.ExclusiveMax
-	} else { 
+	} else {
 		return openapi3.Schema{}, errors.New("merging two schemas on ExclusiveMax unknown error")
 	}
 
@@ -194,7 +193,7 @@ func mergeOpenapiSchemas(s1, s2 openapi3.Schema, allOf bool) (openapi3.Schema, e
 		return openapi3.Schema{}, errors.New("merging two schemas with different Nullable")
 	} else if s1.Nullable == s2.Nullable { // Same value (or non defined)
 		result.Nullable = s1.Nullable
-	} else { 
+	} else {
 		return openapi3.Schema{}, errors.New("merging two schemas on Nullable unknown error")
 	}
 
@@ -206,7 +205,7 @@ func mergeOpenapiSchemas(s1, s2 openapi3.Schema, allOf bool) (openapi3.Schema, e
 		return openapi3.Schema{}, errors.New("merging two schemas with different ReadOnly")
 	} else if s1.ReadOnly == s2.ReadOnly { // Same value (or non defined)
 		result.ReadOnly = s1.ReadOnly
-	} else { 
+	} else {
 		return openapi3.Schema{}, errors.New("merging two schemas on ReadOnly unknown error")
 	}
 
@@ -218,7 +217,7 @@ func mergeOpenapiSchemas(s1, s2 openapi3.Schema, allOf bool) (openapi3.Schema, e
 		return openapi3.Schema{}, errors.New("merging two schemas with different WriteOnly")
 	} else if s1.WriteOnly == s2.WriteOnly { // Same value (or non defined)
 		result.WriteOnly = s1.WriteOnly
-	} else { 
+	} else {
 		return openapi3.Schema{}, errors.New("merging two schemas on WriteOnly unknown error")
 	}
 
@@ -230,7 +229,7 @@ func mergeOpenapiSchemas(s1, s2 openapi3.Schema, allOf bool) (openapi3.Schema, e
 		return openapi3.Schema{}, errors.New("merging two schemas with different AllowEmptyValue")
 	} else if s1.AllowEmptyValue == s2.AllowEmptyValue { // Same value (or non defined)
 		result.AllowEmptyValue = s1.AllowEmptyValue
-	} else { 
+	} else {
 		return openapi3.Schema{}, errors.New("merging two schemas on AllowEmptyValue unknown error")
 	}
 

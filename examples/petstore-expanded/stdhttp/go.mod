@@ -1,6 +1,8 @@
 module github.com/oapi-codegen/oapi-codegen/v2/examples/petstore-expanded/stdhttp
 
-go 1.22
+go 1.22.5
+
+toolchain go1.24.0
 
 replace github.com/oapi-codegen/oapi-codegen/v2 => ../../../
 

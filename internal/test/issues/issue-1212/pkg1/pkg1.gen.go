@@ -17,7 +17,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/d3code/kin-openapi/openapi3"
 	"github.com/gin-gonic/gin"
 	externalRef0 "github.com/oapi-codegen/oapi-codegen/v2/internal/test/issues/issue-1212/pkg2"
 	strictgin "github.com/oapi-codegen/runtime/strictmiddleware/gin"

@@ -12,7 +12,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/d3code/kin-openapi/openapi3"
 	externalRef0 "github.com/oapi-codegen/oapi-codegen/v2/internal/test/externalref/packageA"
 	externalRef1 "github.com/oapi-codegen/oapi-codegen/v2/internal/test/externalref/packageB"
 	externalRef2 "github.com/oapi-codegen/oapi-codegen/v2/internal/test/externalref/petstore"

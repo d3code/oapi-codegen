@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/d3code/kin-openapi/openapi3"
 )
 
 func mergeSchemasV1(allOf []*openapi3.SchemaRef, path []string) (Schema, error) {

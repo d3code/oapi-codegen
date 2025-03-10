@@ -15,7 +15,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/getkin/kin-openapi/openapi3"
+	"github.com/d3code/kin-openapi/openapi3"
 	"github.com/labstack/echo/v4"
 	externalRef0 "github.com/oapi-codegen/oapi-codegen/v2/internal/test/issues/issue-1182/pkg2"
 	strictecho "github.com/oapi-codegen/runtime/strictmiddleware/echo"
